@@ -29,7 +29,7 @@ function OrdersOverview() {
     <Card sx={{ height: "100%" }}>
       <MDBox pt={3} px={3}>
         <MDTypography variant="h6" fontWeight="medium">
-          Orders overview
+          Timeline
         </MDTypography>
         <MDBox mt={0} mb={2}>
           <MDTypography variant="button" color="text" fontWeight="regular">
@@ -39,7 +39,8 @@ function OrdersOverview() {
             &nbsp;
             <MDTypography variant="button" color="text" fontWeight="medium">
               24%
-            </MDTypography>{" "}
+            </MDTypography>
+            {" deeeee"}
             this month
           </MDTypography>
         </MDBox>
@@ -47,27 +48,27 @@ function OrdersOverview() {
       <MDBox p={2}>
         <TimelineItem
           color="success"
-          icon="notifications"
-          title="$2400, Design changes"
-          dateTime="22 DEC 7:20 PM"
-        />
-        <TimelineItem
-          color="error"
-          icon="inventory_2"
-          title="New order #1832412"
-          dateTime="21 DEC 11 PM"
-        />
-        <TimelineItem
-          color="info"
-          icon="shopping_cart"
-          title="Server payments for April"
-          dateTime="21 DEC 9:34 PM"
-        />
-        <TimelineItem
-          color="warning"
           icon="payment"
-          title="New card added for order #4395133"
-          dateTime="20 DEC 2:20 AM"
+          title="2020 - seis novos cursos ofertados"
+          dateTime="Agrocomputação, Ciência de dados, Computação e TIC* em biociências e saúde, Criação digital, Inteligência artificial, Internet das coisas"
+        />
+        <TimelineItem
+          color="success"
+          icon="payment"
+          title="2018 - novo curso ofertado"
+          dateTime="Defesa cibernética"
+        />
+        <TimelineItem
+          color="success"
+          icon="payment"
+          title="2013 - novo curso ofertado"
+          dateTime="Sistemas embarcados"
+        />
+        <TimelineItem
+          color="success"
+          icon="payment"
+          title="2009 - primeiro ano de coleta dos dados, totalizando 11 cursos"
+          dateTime="Banco de dados, Ciência da computação, Engenharia de computação (DCN Computação), Engenharia de software, Gestão da tecnologia da informação, Jogos digitais, Programas interdisciplinares abrangendo computação e TIC*, Redes de computadores, Segurança da informação, Sistemas de informação, "
         />
         <TimelineItem
           color="primary"

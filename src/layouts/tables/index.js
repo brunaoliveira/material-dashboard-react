@@ -15,31 +15,82 @@ Coded by www.creative-tim.com
 
 // @mui material components
 import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
+// import Card from "@mui/material/Card";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+// import MDTypography from "components/MDTypography";
 
 // Material Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+// import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
-import DataTable from "examples/Tables/DataTable";
+// import DataTable from "examples/Tables/DataTable";
+import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
+import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
+import reportsBarChartData from "layouts/rtl/data/reportsBarChartData";
+// import Chart2 from "src/assets/images/charts/ano_ofertas_modalidade.png";
 
 // Data
-import authorsTableData from "layouts/tables/data/authorsTableData";
-import projectsTableData from "layouts/tables/data/projectsTableData";
+// import authorsTableData from "layouts/tables/data/authorsTableData";
+// import projectsTableData from "layouts/tables/data/projectsTableData";
 
 function Tables() {
-  const { columns, rows } = authorsTableData();
-  const { columns: pColumns, rows: pRows } = projectsTableData();
+  // const { columns, rows } = authorsTableData();
+  // const { columns: pColumns, rows: pRows } = projectsTableData();
 
   return (
     <DashboardLayout>
-      <DashboardNavbar />
-      <MDBox pt={6} pb={3}>
+      {/* <DashboardNavbar /> */}
+      <MDBox pt={4} pb={3}>
         <Grid container spacing={6}>
+          <Grid item xs={12} md={6} lg={3}>
+            <MDBox mb={7.5}>
+              <ComplexStatisticsCard
+                color="primary"
+                icon="fact_check"
+                title="Ano"
+                count={2009}
+                percentage={{
+                  color: "success",
+                  amount: "",
+                  label: "Cursos presenciais são 50.66% das ofertas",
+                }}
+              />
+            </MDBox>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <MDBox mb={7.5}>
+              <ComplexStatisticsCard
+                color="success"
+                icon="trending_up"
+                title="Ano"
+                count={2014}
+                percentage={{
+                  color: "success",
+                  amount: "",
+                  label: "As ofertas de cursos EAD passam a ser maioria",
+                }}
+              />
+            </MDBox>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <MDBox mb={7.5}>
+              <ComplexStatisticsCard
+                color="success"
+                icon="trending_up"
+                title="2020"
+                count={90.14}
+                percentage={{
+                  color: "success",
+                  amount: "",
+                  label: "Cursos a distância são absoluta maioria em nível superior ",
+                }}
+              />
+            </MDBox>
+          </Grid>
+        </Grid>
+        {/* <Grid container spacing={6}>
           <Grid item xs={12}>
             <Card>
               <MDBox
@@ -94,7 +145,30 @@ function Tables() {
               </MDBox>
             </Card>
           </Grid>
-        </Grid>
+        </Grid> */}
+        <MDBox mt={4.5}>
+          <Grid container spacing={133}>
+            <Grid item xs={26} md={20} lg={26}>
+              {/* linha abaixo:  aumenta distancia vertical com o próximo elemento */}
+              <MDBox mb={4.5}>
+                <ReportsBarChart
+                  color="info"
+                  title="total de cursos x presencial"
+                  description="Oferta total dos cursos e sua proporção na modalidade presencial"
+                  date="campaign sent 2 days ago"
+                  chart={reportsBarChartData}
+                />
+              </MDBox>
+            </Grid>
+          </Grid>
+          {/* <MDBox>
+            <Grid container spacing={4.5}>
+              <Grid item xs={12} md={6} lg={14}>
+                <OrdersOverview />
+              </Grid>
+            </Grid>
+          </MDBox> */}
+        </MDBox>
       </MDBox>
       <Footer />
     </DashboardLayout>

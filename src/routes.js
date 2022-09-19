@@ -47,19 +47,22 @@ import SignUp from "layouts/authentication/sign-up";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import WcIcon from "@mui/icons-material/Wc";
+import ClassIcon from "@mui/icons-material/Class";
+import PublicIcon from "@mui/icons-material/Public";
 
 const routes = [
   {
     type: "collapse",
-    name: "Dashboard",
+    name: "Cursos", // os cursos diferentes na area da computação
     key: "dashboard",
-    icon: <Icon fontSize="small">dashboard</Icon>,
+    icon: <ClassIcon fontSize="small">WcIcon</ClassIcon>,
     route: "/dashboard",
     component: <Dashboard />,
   },
   {
     type: "collapse",
-    name: "Tables",
+    name: "Modalidade", // presencial/EAD
     key: "tables",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/tables",
@@ -67,23 +70,23 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Billing",
+    name: "Sexo", // Feminino/Masculino
     key: "billing",
-    icon: <Icon fontSize="small">receipt_long</Icon>,
+    icon: <WcIcon fontSize="small">WcIcon</WcIcon>,
     route: "/billing",
     component: <Billing />,
   },
   {
     type: "collapse",
-    name: "RTL",
+    name: "Geografia", // regiões do Brasil
     key: "rtl",
-    icon: <Icon fontSize="small">format_textdirection_r_to_l</Icon>,
+    icon: <PublicIcon fontSize="small">PublicIcon</PublicIcon>,
     route: "/rtl",
     component: <RTL />,
   },
   {
     type: "collapse",
-    name: "Notifications",
+    name: "UFRGS",
     key: "notifications",
     icon: <Icon fontSize="small">notifications</Icon>,
     route: "/notifications",
@@ -91,7 +94,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Profile",
+    name: "2020",
     key: "profile",
     icon: <Icon fontSize="small">person</Icon>,
     route: "/profile",
@@ -99,7 +102,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Sign In",
+    name: "Some other niche",
     key: "sign-in",
     icon: <Icon fontSize="small">login</Icon>,
     route: "/authentication/sign-in",
@@ -107,7 +110,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Sign Up",
+    name: "Some another",
     key: "sign-up",
     icon: <Icon fontSize="small">assignment</Icon>,
     route: "/authentication/sign-up",
