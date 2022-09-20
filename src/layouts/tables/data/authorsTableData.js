@@ -1,24 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/function-component-definition */
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDBadge from "components/MDBadge";
+import MDProgress from "components/MDProgress";
 
 export default function data() {
   const Curso = ({ name }) => (
@@ -31,134 +16,111 @@ export default function data() {
     </MDBox>
   );
 
-  // const Job = ({ title, description }) => (
-  //   <MDBox lineHeight={1} textAlign="left">
-  //     <MDTypography display="block" variant="caption" color="text" fontWeight="medium">
-  //       {title}
-  //     </MDTypography>
-  //     <MDTypography variant="caption">{description}</MDTypography>
-  //   </MDBox>
-  // );
+  const Progress = ({ color, value, mlvalue, mrvalue }) => (
+    <MDBox display="flex" alignItems="center">
+      <MDTypography mr={mrvalue} ml={mlvalue} variant="caption" color="text" fontWeight="medium">
+        {value}%
+      </MDTypography>
+      <MDBox alignItems="center" ml={0.5} width="9rem">
+        <MDProgress variant="gradient" color={color} value={value} />
+      </MDBox>
+    </MDBox>
+  );
 
   return {
     columns: [
       { Header: "curso", accessor: "curso", width: "45%", align: "left" },
-      // { Header: "function", accessor: "function", align: "left" },
-      { Header: "modalidade", accessor: "modalidade", align: "center" },
-      { Header: "employed", accessor: "employed", align: "center" },
-      { Header: "action", accessor: "action", align: "center" },
+      { Header: "modalidade presencial", accessor: "modalidade", align: "left" },
+      { Header: "grau", accessor: "grau", align: "center" },
+      { Header: "ofertas", accessor: "ofertas", align: "center" },
     ],
 
     rows: [
       {
         curso: <Curso name="Agrocomputação" />,
-        // function: <Job title="Manager" description="Organization" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={100} mlvalue={1.3} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
-        employed: (
+        ofertas: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            23/04/18
-          </MDTypography>
-        ),
-        action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            3
           </MDTypography>
         ),
       },
       {
         curso: <Curso name="Banco de Dados" />,
-        // function: <Job title="Programator" description="Developer" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={16.39} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
-        employed: (
+        ofertas: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            11/01/19
-          </MDTypography>
-        ),
-        action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            1437
           </MDTypography>
         ),
       },
       {
         curso: <Curso name="Ciência da Computação" />,
-        // function: <Job title="Executive" description="Projects" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={64.21} mlvalue={0} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
-        employed: (
+        ofertas: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            19/09/17
-          </MDTypography>
-        ),
-        action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            6589
           </MDTypography>
         ),
       },
       {
         curso: <Curso name="Ciência de dados" />,
-        // function: <Job title="Programator" description="Developer" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={0.55} mlvalue={0.8} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
-        employed: (
+        ofertas: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            24/12/08
-          </MDTypography>
-        ),
-        action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            1634
           </MDTypography>
         ),
       },
       {
         curso: <Curso name="Computação e TIC* em biociências e saúde" />,
-        // function: <Job title="Manager" description="Executive" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={71.42} mlvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
-        employed: (
+        ofertas: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            04/10/21
-          </MDTypography>
-        ),
-        action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
+            7
           </MDTypography>
         ),
       },
       {
         curso: <Curso name="Criação digital" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={100} mlvalue={1.3} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
-        employed: (
+        ofertas: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            14/09/20
+            6
           </MDTypography>
         ),
         action: (
@@ -169,106 +131,193 @@ export default function data() {
       },
       {
         curso: <Curso name="Defesa cibernética" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={1.06} mlvalue={0.8} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
+        ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            944
+          </MDTypography>
         ),
       },
       {
         curso: <Curso name="Engenharia de computação (DCN Computação)" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={65.39} mlvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
+        ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            1165
+          </MDTypography>
         ),
       },
       {
         curso: <Curso name="Engenharia de software" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={11.45} mlvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
+        ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            3182
+          </MDTypography>
         ),
       },
       {
         curso: <Curso name="Gestão da tecnologia da informação" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={8.05} mlvalue={0.8} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
+        ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            18292
+          </MDTypography>
         ),
       },
       {
         curso: <Curso name="Inteligência artificial" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={50} mlvalue={1.3} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
+        ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            4
+          </MDTypography>
         ),
       },
       {
         curso: <Curso name="Internet das coisas" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={0} mlvalue={2} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
+        ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            215
+          </MDTypography>
         ),
       },
       {
         curso: <Curso name="Jogos digitais" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={25.63} mlvalue={-1} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
+        ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            2365
+          </MDTypography>
         ),
       },
       {
         curso: <Curso name="Programas interdisciplinares abrangendo computação e TIC*" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={11.47} mlvalue={-1} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            888
+          </MDTypography>
+        ),
       },
       {
         curso: <Curso name="Redes de computadores" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={40.98} mlvalue={-1.1} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            6814
+          </MDTypography>
+        ),
       },
       {
         curso: <Curso name="Segurança da informação" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={11} mlvalue={1.3} mrvalue={0} />,
+        grau: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            1851
+          </MDTypography>
+        ),
+      },
+      {
+        curso: <Curso name="Sistemas de informação" />,
+        modalidade: <Progress color="text" value={26.88} mlvalue={-1.2} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="licenciatura" color="warning" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            42662
+          </MDTypography>
+        ),
       },
       {
         curso: <Curso name="Sistemas embarcados" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={100} mlvalue={0.2} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            11
+          </MDTypography>
+        ),
       },
       {
         curso: <Curso name="Sistemas para internet" />,
-        modalidade: (
+        modalidade: <Progress color="text" value={26.98} mlvalue={-0.9} mrvalue={0} />,
+        grau: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
             <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
+        ),
+        ofertas: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            5291
+          </MDTypography>
         ),
       },
     ],
