@@ -1,4 +1,4 @@
-import Chart1 from "assets/images/charts/cursos_ofertas_modalidade.png";
+import Chart2 from "assets/images/charts/ano_ofertas_modalidade.png";
 
 // import { useMemo } from "react";
 import PropTypes from "prop-types";
@@ -8,9 +8,9 @@ import Card from "@mui/material/Card";
 // import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-// import configs from "examples/Charts/BarCharts/ReportsBarChart/configs";
+// import configs from "examples/Charts/BarCharts/ReportsBarChartModalidade/configs";
 
-function ReportsBarChart({ title, description }) {
+function ReportsBarChartModalidade({ title, description }) {
   // const { data, options } = configs(chart.labels || [], chart.datasets || {});
   const imgStyle = {
     height: "50%",
@@ -21,7 +21,7 @@ function ReportsBarChart({ title, description }) {
     <Card sx={{ height: "100%" }}>
       <MDBox padding="1rem">
         <div className="container">
-          <img style={imgStyle} src={Chart1} alt="" />
+          <img style={imgStyle} src={Chart2} alt="" />
         </div>
         {/* {useMemo(
           () => (
@@ -54,13 +54,13 @@ function ReportsBarChart({ title, description }) {
 }
 
 // Setting default values for the props of ReportsBarChart
-ReportsBarChart.defaultProps = {
+ReportsBarChartModalidade.defaultProps = {
   // color: "dark",
   description: "",
 };
 
 // Typechecking props for the ReportsBarChart
-ReportsBarChart.propTypes = {
+ReportsBarChartModalidade.propTypes = {
   // color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
@@ -68,4 +68,4 @@ ReportsBarChart.propTypes = {
   // chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
 };
 
-export default ReportsBarChart;
+export default ReportsBarChartModalidade;

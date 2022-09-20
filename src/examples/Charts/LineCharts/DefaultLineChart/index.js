@@ -105,8 +105,8 @@ function DefaultLineChart({ icon, title, description, height, chart }) {
 // Setting default values for the props of DefaultLineChart
 DefaultLineChart.defaultProps = {
   icon: { color: "info", component: "" },
-  title: "",
-  description: "",
+  title: "ddd",
+  description: "ssss",
   height: "19.125rem",
 };
 

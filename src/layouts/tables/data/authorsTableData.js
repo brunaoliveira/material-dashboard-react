@@ -18,52 +18,44 @@ Coded by www.creative-tim.com
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDAvatar from "components/MDAvatar";
 import MDBadge from "components/MDBadge";
 
-// Images
-import team2 from "assets/images/team-2.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
-
 export default function data() {
-  const Author = ({ image, name, email }) => (
+  const Curso = ({ name }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
-      <MDAvatar src={image} name={name} size="sm" />
-      <MDBox ml={2} lineHeight={1}>
+      <MDBox ml={1} lineHeight={1}>
         <MDTypography display="block" variant="button" fontWeight="medium">
           {name}
         </MDTypography>
-        <MDTypography variant="caption">{email}</MDTypography>
       </MDBox>
     </MDBox>
   );
 
-  const Job = ({ title, description }) => (
-    <MDBox lineHeight={1} textAlign="left">
-      <MDTypography display="block" variant="caption" color="text" fontWeight="medium">
-        {title}
-      </MDTypography>
-      <MDTypography variant="caption">{description}</MDTypography>
-    </MDBox>
-  );
+  // const Job = ({ title, description }) => (
+  //   <MDBox lineHeight={1} textAlign="left">
+  //     <MDTypography display="block" variant="caption" color="text" fontWeight="medium">
+  //       {title}
+  //     </MDTypography>
+  //     <MDTypography variant="caption">{description}</MDTypography>
+  //   </MDBox>
+  // );
 
   return {
     columns: [
-      { Header: "author", accessor: "author", width: "45%", align: "left" },
-      { Header: "function", accessor: "function", align: "left" },
-      { Header: "status", accessor: "status", align: "center" },
+      { Header: "curso", accessor: "curso", width: "45%", align: "left" },
+      // { Header: "function", accessor: "function", align: "left" },
+      { Header: "modalidade", accessor: "modalidade", align: "center" },
       { Header: "employed", accessor: "employed", align: "center" },
       { Header: "action", accessor: "action", align: "center" },
     ],
 
     rows: [
       {
-        author: <Author image={team2} name="John Michael" email="john@creative-tim.com" />,
-        function: <Job title="Manager" description="Organization" />,
-        status: (
+        curso: <Curso name="Agrocomputação" />,
+        // function: <Job title="Manager" description="Organization" />,
+        modalidade: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="online" color="success" variant="gradient" size="sm" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
         employed: (
@@ -78,11 +70,11 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
-        function: <Job title="Programator" description="Developer" />,
-        status: (
+        curso: <Curso name="Banco de Dados" />,
+        // function: <Job title="Programator" description="Developer" />,
+        modalidade: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
         employed: (
@@ -97,11 +89,12 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
-        function: <Job title="Executive" description="Projects" />,
-        status: (
+        curso: <Curso name="Ciência da Computação" />,
+        // function: <Job title="Executive" description="Projects" />,
+        modalidade: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="online" color="success" variant="gradient" size="sm" />
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
         employed: (
@@ -116,11 +109,12 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
-        function: <Job title="Programator" description="Developer" />,
-        status: (
+        curso: <Curso name="Ciência de dados" />,
+        // function: <Job title="Programator" description="Developer" />,
+        modalidade: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="online" color="success" variant="gradient" size="sm" />
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
         employed: (
@@ -135,11 +129,12 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team3} name="Richard Gran" email="richard@creative-tim.com" />,
-        function: <Job title="Manager" description="Executive" />,
-        status: (
+        curso: <Curso name="Computação e TIC* em biociências e saúde" />,
+        // function: <Job title="Manager" description="Executive" />,
+        modalidade: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
         employed: (
@@ -154,11 +149,11 @@ export default function data() {
         ),
       },
       {
-        author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
-        function: <Job title="Programator" description="Developer" />,
-        status: (
+        curso: <Curso name="Criação digital" />,
+        modalidade: (
           <MDBox ml={-1}>
-            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
           </MDBox>
         ),
         employed: (
@@ -170,6 +165,110 @@ export default function data() {
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
             Edit
           </MDTypography>
+        ),
+      },
+      {
+        curso: <Curso name="Defesa cibernética" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Engenharia de computação (DCN Computação)" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Engenharia de software" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Gestão da tecnologia da informação" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Inteligência artificial" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Internet das coisas" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Jogos digitais" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Programas interdisciplinares abrangendo computação e TIC*" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Redes de computadores" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Segurança da informação" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="licenciatura" color="warning" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Sistemas embarcados" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
+        ),
+      },
+      {
+        curso: <Curso name="Sistemas para internet" />,
+        modalidade: (
+          <MDBox ml={-1}>
+            <MDBadge badgeContent="bacharelado" color="primary" variant="gradient" size="md" />
+            <MDBadge badgeContent="tecnológico" color="success" variant="gradient" size="md" />
+          </MDBox>
         ),
       },
     ],

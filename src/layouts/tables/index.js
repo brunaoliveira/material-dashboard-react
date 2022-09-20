@@ -1,47 +1,23 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
 import Grid from "@mui/material/Grid";
-// import Card from "@mui/material/Card";
-
-// Material Dashboard 2 React components
+import Card from "@mui/material/Card";
 import MDBox from "components/MDBox";
-// import MDTypography from "components/MDTypography";
-
-// Material Dashboard 2 React example components
+import MDTypography from "components/MDTypography";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-// import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-// import DataTable from "examples/Tables/DataTable";
+import DataTable from "examples/Tables/DataTable";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
-import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
-import reportsBarChartData from "layouts/rtl/data/reportsBarChartData";
-// import Chart2 from "src/assets/images/charts/ano_ofertas_modalidade.png";
-
-// Data
-// import authorsTableData from "layouts/tables/data/authorsTableData";
+import reportsLineChartData2 from "layouts/rtl/data/reportsLineChartData2";
+import ReportsBarChartModalidade from "examples/Charts/BarCharts/ReportsBarChartModalidade";
+import authorsTableData from "layouts/tables/data/authorsTableData";
+// import Chart2 from "assets/images/charts/ano_ofertas_modalidade.png";
 // import projectsTableData from "layouts/tables/data/projectsTableData";
+// import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 
 function Tables() {
-  // const { columns, rows } = authorsTableData();
+  const { columns, rows } = authorsTableData();
   // const { columns: pColumns, rows: pRows } = projectsTableData();
 
   return (
     <DashboardLayout>
-      {/* <DashboardNavbar /> */}
       <MDBox pt={4} pb={3}>
         <Grid container spacing={6}>
           <Grid item xs={12} md={6} lg={3}>
@@ -90,35 +66,60 @@ function Tables() {
             </MDBox>
           </Grid>
         </Grid>
-        {/* <Grid container spacing={6}>
-          <Grid item xs={12}>
-            <Card>
-              <MDBox
-                mx={2}
-                mt={-3}
-                py={3}
-                px={2}
-                variant="gradient"
-                bgColor="info"
-                borderRadius="lg"
-                coloredShadow="info"
-              >
-                <MDTypography variant="h6" color="white">
-                  Authors Table
-                </MDTypography>
-              </MDBox>
-              <MDBox pt={3}>
-                <DataTable
-                  table={{ columns, rows }}
-                  isSorted={false}
-                  entriesPerPage={false}
-                  showTotalEntries={false}
-                  noEndBorder
+
+        <MDBox mt={1.5} mb={5.5}>
+          <Grid container spacing={133}>
+            <Grid item xs={6} md={10} lg={26}>
+              {/* linha abaixo:  aumenta distancia vertical com o próximo elemento */}
+              <MDBox mb={4.5}>
+                <ReportsBarChartModalidade
+                  color="info"
+                  title="total de cursos x presencial"
+                  description="Oferta total dos cursos e sua proporção na modalidade presencial"
+                  date="campaign sent 2 days ago"
+                  chart={reportsLineChartData2}
                 />
               </MDBox>
-            </Card>
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
+          {/* <MDBox>
+            <Grid container spacing={4.5}>
+              <Grid item xs={12} md={6} lg={14}>
+                <OrdersOverview />
+              </Grid>
+            </Grid>
+          </MDBox> */}
+        </MDBox>
+        <MDBox mt={2.5}>
+          <Grid container spacing={6}>
+            <Grid item xs={12}>
+              <Card>
+                <MDBox
+                  mx={2}
+                  mt={-3}
+                  py={3}
+                  px={2}
+                  variant="gradient"
+                  bgColor="info"
+                  borderRadius="lg"
+                  coloredShadow="info"
+                >
+                  <MDTypography variant="h6" color="white">
+                    Cursos vistos do ponto de vista de modalidade
+                  </MDTypography>
+                </MDBox>
+                <MDBox pt={3}>
+                  <DataTable
+                    table={{ columns, rows }}
+                    isSorted={false}
+                    entriesPerPage={false}
+                    showTotalEntries={false}
+                    noEndBorder
+                  />
+                </MDBox>
+              </Card>
+            </Grid>
+            {/* <Grid item xs={12}>
             <Card>
               <MDBox
                 mx={2}
@@ -144,33 +145,10 @@ function Tables() {
                 />
               </MDBox>
             </Card>
+          </Grid> */}
           </Grid>
-        </Grid> */}
-        <MDBox mt={4.5}>
-          <Grid container spacing={133}>
-            <Grid item xs={26} md={20} lg={26}>
-              {/* linha abaixo:  aumenta distancia vertical com o próximo elemento */}
-              <MDBox mb={4.5}>
-                <ReportsBarChart
-                  color="info"
-                  title="total de cursos x presencial"
-                  description="Oferta total dos cursos e sua proporção na modalidade presencial"
-                  date="campaign sent 2 days ago"
-                  chart={reportsBarChartData}
-                />
-              </MDBox>
-            </Grid>
-          </Grid>
-          {/* <MDBox>
-            <Grid container spacing={4.5}>
-              <Grid item xs={12} md={6} lg={14}>
-                <OrdersOverview />
-              </Grid>
-            </Grid>
-          </MDBox> */}
         </MDBox>
       </MDBox>
-      <Footer />
     </DashboardLayout>
   );
 }

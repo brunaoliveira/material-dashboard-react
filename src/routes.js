@@ -70,7 +70,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Sexo", // Feminino/Masculino
+    name: "Geografia", // Feminino/Masculino
     key: "billing",
     icon: <WcIcon fontSize="small">WcIcon</WcIcon>,
     route: "/billing",
