@@ -8,13 +8,11 @@ import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatist
 import reportsLineChartData2 from "layouts/rtl/data/reportsLineChartData2";
 import ReportsBarChartModalidade from "examples/Charts/BarCharts/ReportsBarChartModalidade";
 import authorsTableData from "layouts/tables/data/authorsTableData";
-// import Chart2 from "assets/images/charts/ano_ofertas_modalidade.png";
 // import projectsTableData from "layouts/tables/data/projectsTableData";
-// import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+// const { columns: pColumns, rows: pRows } = projectsTableData();
 
 function Tables() {
   const { columns, rows } = authorsTableData();
-  // const { columns: pColumns, rows: pRows } = projectsTableData();
 
   return (
     <DashboardLayout>
@@ -25,27 +23,12 @@ function Tables() {
               <ComplexStatisticsCard
                 color="primary"
                 icon="fact_check"
-                title="Ano"
-                count={2009}
+                title="2009"
+                count="59.55%"
                 percentage={{
                   color: "success",
                   amount: "",
-                  label: "Cursos presenciais são 50.66% das ofertas",
-                }}
-              />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={7.5}>
-              <ComplexStatisticsCard
-                color="success"
-                icon="trending_up"
-                title="Ano"
-                count={2014}
-                percentage={{
-                  color: "success",
-                  amount: "",
-                  label: "As ofertas de cursos EAD passam a ser maioria",
+                  label: "Em 2009 cursos presenciais são 50.66% das ofertas",
                 }}
               />
             </MDBox>
@@ -56,11 +39,42 @@ function Tables() {
                 color="success"
                 icon="trending_up"
                 title="2020"
-                count={90.14}
+                count="91.85%"
                 percentage={{
                   color: "success",
                   amount: "",
                   label: "Cursos a distância são absoluta maioria em nível superior ",
+                }}
+              />
+            </MDBox>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <MDBox mb={7.5}>
+              <ComplexStatisticsCard
+                color="warning"
+                icon="account_balance"
+                title="Cursos 100% presenciais"
+                count={3}
+                percentage={{
+                  color: "success",
+                  amount: "",
+                  label: "Agrocomputação, Criação digital e Sistemas embarcados",
+                }}
+              />
+            </MDBox>
+          </Grid>
+          <Grid item xs={12} md={6} lg={3}>
+            <MDBox mb={7.5}>
+              <ComplexStatisticsCard
+                color="dark"
+                icon="house"
+                title="Cursos 100% EAD"
+                count={1}
+                percentage={{
+                  color: "success",
+                  amount: "",
+                  label:
+                    "Internet das coisas é o único curso oferecido apenas na modalidade à distância",
                 }}
               />
             </MDBox>
@@ -105,7 +119,7 @@ function Tables() {
                   coloredShadow="info"
                 >
                   <MDTypography variant="h6" color="white">
-                    Cursos vistos do ponto de vista de modalidade
+                    Cursos vistos do ponto de vista de modalidade (dados de 2020)
                   </MDTypography>
                 </MDBox>
                 <MDBox pt={3}>

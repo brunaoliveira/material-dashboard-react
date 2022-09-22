@@ -5,6 +5,7 @@ import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+// import DefaultChart from "layouts/dashboard/defaultChart";
 
 function Dashboard() {
   return (
@@ -21,7 +22,7 @@ function Dashboard() {
                 percentage={{
                   color: "success",
                   amount: "",
-                  label: "Números de cursos oferecidos na área da Computação",
+                  label: "Números de diferentes cursos oferecidos na área da Computação",
                 }}
               />
             </MDBox>
@@ -30,7 +31,7 @@ function Dashboard() {
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 icon="leaderboard"
-                title="xxx"
+                title="Grau"
                 count="2,300"
                 percentage={{
                   color: "success",
@@ -96,6 +97,37 @@ function Dashboard() {
               </Grid>
             </Grid>
           </MDBox>
+        </MDBox>
+        <MDBox mt={4.5}>
+          <Grid container spacing={133}>
+            <Grid item xs={26} md={20} lg={26}>
+              {/* linha abaixo:  aumenta distancia vertical com o próximo elemento */}
+              <MDBox mb={4.5}>
+                <ReportsBarChart
+                  color="info"
+                  title="total de cursos x presencial"
+                  description="Oferta total dos cursos e sua proporção na modalidade presencial"
+                  date="campaign sent 2 days ago"
+                  chart={reportsBarChartData}
+                />
+              </MDBox>
+            </Grid>
+          </Grid>
+          <MDBox>
+            <Grid container spacing={4.5}>
+              {/* <Grid item xs={12} md={6} lg={8}>
+                <Projects />
+              </Grid> */}
+              <Grid item xs={12} md={6} lg={14}>
+                <OrdersOverview />
+              </Grid>
+            </Grid>
+          </MDBox>
+          {/* <MDBox>
+            <Grid container spacing={4.5}>
+              <DefaultChart />
+            </Grid>
+          </MDBox> */}
         </MDBox>
       </MDBox>
     </DashboardLayout>
