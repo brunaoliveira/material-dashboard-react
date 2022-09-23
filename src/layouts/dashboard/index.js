@@ -103,6 +103,13 @@ function Dashboard() {
             </Grid>
           </Grid>
         </MDBox>
+        {/* <MDBox mt={4.5}>
+          <Grid container spacing={4.5}>
+            <Grid item xs={12} md={6} lg={14}>
+              <DefaultChart />
+            </Grid>
+          </Grid>
+        </MDBox> */}
       </MDBox>
     </DashboardLayout>
   );
