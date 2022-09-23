@@ -1,4 +1,4 @@
-import Chart3 from "assets/images/charts/porcentagem_curso_.png";
+import Chart3 from "assets/images/charts/porcentagem_curso.svg";
 import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import MDBox from "components/MDBox";

@@ -99,7 +99,10 @@ function Dashboard() {
         <MDBox mt={4.5}>
           <Grid container spacing={4.5}>
             <Grid item xs={12} md={6} lg={14}>
-              <PieChart />
+              <PieChart
+                title="Ofertas x Curso"
+                description="Percentual de ofertas do ano de 2020 para cada curso"
+              />
             </Grid>
           </Grid>
         </MDBox>

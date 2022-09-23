@@ -1,4 +1,6 @@
-import Chart from "assets/images/charts/ano_ofertas_regiões.png";
+// import Chart from "assets/images/charts/ano_ofertas_regioes.png";
+import Chart2 from "assets/images/charts/ano_ofertas_regioes.svg";
+
 import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import MDBox from "components/MDBox";
@@ -14,7 +16,7 @@ function ChartOne({ title, description }) {
     <Card sx={{ height: "100%" }}>
       <MDBox padding="1rem">
         <div className="container">
-          <img style={imgStyle} src={Chart} alt="" />
+          <img style={imgStyle} src={Chart2} alt="" />
         </div>
         <MDBox pt={3} pb={1} px={1}>
           <MDTypography variant="h6" textTransform="capitalize">
