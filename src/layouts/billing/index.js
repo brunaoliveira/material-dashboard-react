@@ -3,7 +3,8 @@ import MDBox from "components/MDBox";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import Footer from "examples/Footer";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
-import ChartOne from "./chartOne";
+// import ChartOne from "./chartOne";
+import ReportsBarChartModalidade from "examples/Charts/BarCharts/ReportsBarChartModalidade";
 
 function Billing() {
   return (
@@ -73,8 +74,11 @@ function Billing() {
         <MDBox mt={4.5}>
           <Grid container spacing={133}>
             <Grid item xs={26} md={20} lg={26}>
-              <MDBox mb={4.5}>
+              {/* <MDBox mb={4.5}>
                 <ChartOne title="some title" description="some description" />
+              </MDBox> */}
+              <MDBox mb={4.5}>
+                <ReportsBarChartModalidade title="some title" description="some description" />
               </MDBox>
             </Grid>
           </Grid>
