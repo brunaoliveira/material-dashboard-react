@@ -1,88 +1,41 @@
-import { useMemo } from "react";
+import Chart3 from "assets/images/charts/porcentagem_curso_.png";
 import PropTypes from "prop-types";
-import { Pie } from "react-chartjs-2";
 import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import configs from "examples/Charts/PieChart/configs";
 
-function PieChart({ icon, title, description, height, chart }) {
-  const { data, options } = configs(chart.labels || [], chart.datasets || {});
+function PieChart({ title, description }) {
+  const imgStyle = {
+    height: "50%",
+    width: "100%",
+  };
 
-  const renderChart = (
-    <MDBox py={2} pr={2} pl={icon.component ? 1 : 2}>
-      {title || description ? (
-        <MDBox display="flex" px={description ? 1 : 0} pt={description ? 1 : 0}>
-          {icon.component && (
-            <MDBox
-              width="4rem"
-              height="4rem"
-              bgColor={icon.color || "info"}
-              variant="gradient"
-              coloredShadow={icon.color || "info"}
-              borderRadius="xl"
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              color="white"
-              mt={-5}
-              mr={2}
-            >
-              <Icon fontSize="medium">{icon.component}</Icon>
-            </MDBox>
-          )}
-          <MDBox mt={icon.component ? -2 : 0}>
-            {title && <MDTypography variant="h6">{title}</MDTypography>}
-            <MDBox mb={2}>
-              <MDTypography component="div" variant="button" color="text">
-                {description}
-              </MDTypography>
-            </MDBox>
-          </MDBox>
+  return (
+    <Card sx={{ height: "100%" }}>
+      <MDBox padding="1rem">
+        <div className="container">
+          <img style={imgStyle} src={Chart3} alt="" />
+        </div>
+        <MDBox pt={3} pb={1} px={1}>
+          <MDTypography variant="h6" textTransform="capitalize">
+            {title}
+          </MDTypography>
+          <MDTypography component="div" variant="button" color="text" fontWeight="light">
+            {description}
+          </MDTypography>
         </MDBox>
-      ) : null}
-      {useMemo(
-        () => (
-          <MDBox height={height}>
-            <Pie data={data} options={options} />
-          </MDBox>
-        ),
-        [chart, height]
-      )}
-    </MDBox>
+      </MDBox>
+    </Card>
   );
-
-  return title || description ? <Card>{renderChart}</Card> : renderChart;
 }
 
-// Setting default values for the props of PieChart
 PieChart.defaultProps = {
-  icon: { color: "info", component: "" },
-  title: "",
   description: "",
-  height: "19.125rem",
 };
 
-// Typechecking props for the PieChart
 PieChart.propTypes = {
-  icon: PropTypes.shape({
-    color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "light",
-      "dark",
-    ]),
-    component: PropTypes.node,
-  }),
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
 };
 
 export default PieChart;
