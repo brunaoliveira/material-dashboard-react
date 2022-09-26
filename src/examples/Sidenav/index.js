@@ -9,7 +9,7 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
 import SidenavRoot from "examples/Sidenav/SidenavRoot";
-import sidenavLogoLabel from "examples/Sidenav/styles/sidenav";
+// import sidenavLogoLabel from "examples/Sidenav/styles/sidenav";
 import {
   useMaterialUIController,
   setMiniSidenav,
@@ -130,16 +130,19 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
             <Icon sx={{ fontWeight: "bold" }}>close</Icon>
           </MDTypography>
         </MDBox>
-        <MDBox component={NavLink} to="/" display="flex" alignItems="center">
+        <MDBox component={NavLink} to="/" display="block" alignItems="center">
           {/* imagem ao lado de Tecnologias ... */}
-          <MDBox
+          {/* <MDBox
             width={!brandName && "100%"}
             sx={(theme) => sidenavLogoLabel(theme, { miniSidenav })}
-          >
+          > */}
             <MDTypography component="h6" variant="button" fontWeight="medium" color={textColor}>
-              {brandName}
+              Tecnologias da Informação
             </MDTypography>
-          </MDBox>
+            <MDTypography component="h6" text-align="center" alignItems="center" variant="button" fontWeight="medium" color={textColor}>
+              e Comunicação
+            </MDTypography>
+          {/* </MDBox> */}
         </MDBox>
       </MDBox>
       <Divider

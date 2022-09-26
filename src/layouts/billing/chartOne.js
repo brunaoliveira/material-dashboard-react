@@ -1,4 +1,4 @@
-import Chart from "assets/images/charts/ano_ofertas_regioes.png";
+import Chart from "assets/images/charts/ofertas_uf.svg";
 import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import MDBox from "components/MDBox";

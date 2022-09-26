@@ -3,8 +3,10 @@ import MDBox from "components/MDBox";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import Footer from "examples/Footer";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
-// import ChartOne from "./chartOne";
-import ReportsBarChartModalidade from "examples/Charts/BarCharts/ReportsBarChartModalidade";
+// import ReportsBarChartModalidade from "examples/Charts/BarCharts/ReportsBarChartModalidade";
+import ChartOne from "./ChartOne";
+import ChartTwo from "./ChartTwo";
+import ChartThree from "./ChartThree";
 
 function Billing() {
   return (
@@ -78,14 +80,31 @@ function Billing() {
                 <ChartOne title="some title" description="some description" />
               </MDBox> */}
               <MDBox mb={4.5}>
-                <ReportsBarChartModalidade title="some title" description="some description" />
+                <ChartOne title="some title" description="some description" />
               </MDBox>
             </Grid>
           </Grid>
           <MDBox>
             <Grid container spacing={4.5}>
               <Grid item xs={12} md={6} lg={14}>
-                {/* some other */}
+                <MDBox mb={4.5}>
+                  <ChartTwo
+                    title="Oferta por estado"
+                    description="Concentração de ofertas para cada unidade da federação no ano de 2020"
+                  />
+                </MDBox>
+              </Grid>
+            </Grid>
+          </MDBox>
+          <MDBox>
+            <Grid container spacing={4.5}>
+              <Grid item xs={12} md={6} lg={14}>
+                <MDBox mb={4.5}>
+                  <ChartThree
+                    title="Oferta por estado"
+                    description="Concentração de ofertas para cada unidade da federação no ano de 2020"
+                  />
+                </MDBox>
               </Grid>
             </Grid>
           </MDBox>
