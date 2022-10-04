@@ -1,9 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/function-component-definition */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable no-dupe-keys */
-/* eslint-disable react/function-component-definition */
-
 import Chart from "assets/images/charts/ofertas_regiao_capital.svg";
 import PropTypes from "prop-types";
 import Card from "@mui/material/Card";

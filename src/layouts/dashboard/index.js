@@ -23,7 +23,7 @@ function Dashboard() {
                 percentage={{
                   color: "success",
                   amount: "",
-                  label: "Números de diferentes cursos oferecidos na área da Computação",
+                  label: "Cursos oferecidos na área da Computação",
                 }}
               />
             </MDBox>
