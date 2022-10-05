@@ -3,10 +3,9 @@ import MDBox from "components/MDBox";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import Footer from "examples/Footer";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
-// import ReportsBarChartModalidade from "examples/Charts/BarCharts/ReportsBarChartModalidade";
-import ChartOne from "./ChartOne";
-import ChartTwo from "./ChartTwo";
-import ChartThree from "./ChartThree";
+import ChartOne from "./components/MyCharts/ChartOne";
+import ChartTwo from "./components/MyCharts/ChartTwo";
+import ChartThree from "./components/MyCharts/ChartThree";
 
 function Billing() {
   return (
