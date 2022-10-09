@@ -11,19 +11,19 @@ import PieChart from "examples/Charts/PieChart";
 function Dashboard() {
   return (
     <DashboardLayout>
-      <MDBox py={4.5}>
+      <MDBox py={2}>
         <Grid container spacing={3}>
           <Grid item xs={1} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="dark"
-                icon="weekend"
+                icon="description"
                 title="Cursos"
                 count={19}
                 percentage={{
                   color: "success",
                   amount: "",
-                  label: "Cursos oferecidos na área da Computação",
+                  label: "Cursos oferecidos na área da Tecnologias da Informação e Comunicação",
                 }}
               />
             </MDBox>
@@ -31,12 +31,12 @@ function Dashboard() {
           <Grid item xs={1} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
+                color="primary"
                 icon="leaderboard"
                 title="Cursos"
                 count="0"
                 percentage={{
                   color: "success",
-                  amount: "",
                   label: "Cursos oferecidos no grau Licenciatura atualmente",
                 }}
               />
@@ -46,13 +46,12 @@ function Dashboard() {
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="success"
-                icon="store"
-                title="xxx"
-                count="34k"
+                icon="emoji_events"
+                title="Ofertas"
+                count="9413"
                 percentage={{
                   color: "success",
-                  amount: "",
-                  label: "abc",
+                  label: "O curso de Sistemas de informação apresenta o maior número de ofertas",
                 }}
               />
             </MDBox>
@@ -60,14 +59,13 @@ function Dashboard() {
           <Grid item xs={1} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
-                color="primary"
-                icon="person_add"
-                title="xxx"
-                count="+91"
+                color="warning"
+                icon="attach_money"
+                title="Rede privada"
+                count="1"
                 percentage={{
                   color: "success",
-                  amount: "",
-                  label: "abc",
+                  label: "Curso oferecido apenas na rede privada: Defesa cibernética",
                 }}
               />
             </MDBox>

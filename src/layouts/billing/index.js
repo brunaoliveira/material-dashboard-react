@@ -1,28 +1,27 @@
 import Grid from "@mui/material/Grid";
 import MDBox from "components/MDBox";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import Footer from "examples/Footer";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
-import ChartOne from "./components/MyCharts/ChartOne";
+// import ChartOne from "./components/MyCharts/ChartOne";
 import ChartTwo from "./components/MyCharts/ChartTwo";
 import ChartThree from "./components/MyCharts/ChartThree";
 
 function Billing() {
   return (
     <DashboardLayout>
-      <MDBox mt={8}>
+      <MDBox mt={2}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="dark"
-                icon="weekend"
-                title="Cursos"
-                count={19}
+                icon="gps_fixed"
+                title="UF"
+                count="23%"
                 percentage={{
                   color: "success",
                   amount: "",
-                  label: "Números de diferentes cursos oferecidos na área da Computação",
+                  label: "Porcentagem de ofertas do Brasil que se encontram no estado de São Paulo",
                 }}
               />
             </MDBox>
@@ -30,13 +29,13 @@ function Billing() {
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
-                icon="leaderboard"
-                title="Cursos"
-                count="0"
+                color="warning"
+                icon="explore"
+                title="Região Norte"
+                count="73%"
                 percentage={{
-                  color: "success",
-                  amount: "",
-                  label: "Cursos oferecidos no grau Licenciatura atualmente",
+                  color: "warning",
+                  label: "Porcentagem das ofertas da região Norte que se encontram nas capitais",
                 }}
               />
             </MDBox>
@@ -45,13 +44,12 @@ function Billing() {
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="success"
-                icon="store"
-                title="xxx"
-                count="34k"
+                icon="explore"
+                title="Região Sul"
+                count="23%"
                 percentage={{
-                  color: "success",
-                  amount: "",
-                  label: "abc",
+                  color: "warning",
+                  label: "Porcentagem das ofertas da região Sul que se encontram nas capitais",
                 }}
               />
             </MDBox>
@@ -60,36 +58,25 @@ function Billing() {
             <MDBox mb={1.5}>
               <ComplexStatisticsCard
                 color="primary"
-                icon="person_add"
-                title="xxx"
-                count="+91"
+                icon="public"
+                title="Exterior"
+                count="22"
                 percentage={{
                   color: "success",
-                  amount: "",
-                  label: "abc",
+                  label: "22 ofertas de cursos com o valor Exterior aparecem pela primeira vez em 2020",
                 }}
               />
             </MDBox>
           </Grid>
         </Grid>
         <MDBox mt={4.5}>
-          <Grid container spacing={133}>
-            <Grid item xs={26} md={20} lg={26}>
-              {/* <MDBox mb={4.5}>
-                <ChartOne title="some title" description="some description" />
-              </MDBox> */}
-              <MDBox mb={4.5}>
-                <ChartOne title="some title" description="some description" />
-              </MDBox>
-            </Grid>
-          </Grid>
           <MDBox>
             <Grid container spacing={4.5}>
               <Grid item xs={12} md={6} lg={14}>
                 <MDBox mb={4.5}>
                   <ChartTwo
                     title="Oferta por estado"
-                    description="Concentração de ofertas para cada unidade da federação no ano de 2020"
+                    description="Concentração de ofertas para cada unidade da federação nos anos de 2009 e 2020"
                   />
                 </MDBox>
               </Grid>
@@ -100,8 +87,8 @@ function Billing() {
               <Grid item xs={12} md={6} lg={14}>
                 <MDBox mb={4.5}>
                   <ChartThree
-                    title="Oferta por estado"
-                    description="Concentração de ofertas para cada unidade da federação no ano de 2020"
+                    title="Oferta região: Capitais vs. Interior"
+                    description="Concentração de ofertas para cada uma das regiões no ano de 2020, divididas entre capitais e interior"
                   />
                 </MDBox>
               </Grid>
@@ -109,7 +96,6 @@ function Billing() {
           </MDBox>
         </MDBox>
       </MDBox>
-      <Footer />
     </DashboardLayout>
   );
 }

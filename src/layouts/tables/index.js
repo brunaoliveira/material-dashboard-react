@@ -74,7 +74,7 @@ function Tables() {
                   color: "success",
                   amount: "",
                   label:
-                    "Internet das coisas é o único curso oferecido apenas na modalidade à distância",
+                    "Internet das coisas é o único oferecido apenas na modalidade à distância",
                 }}
               />
             </MDBox>
